@@ -1,16 +1,11 @@
-package org.schedulerjms.infrastructure.sender;
+package org.schedulerjms.infrastructure.jms.sender;
 
 import org.json.JSONObject;
-import org.schedulerjms.infrastructure.domain.JSONMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.ObjectMessage;
-import javax.jms.Session;
-import java.io.Serializable;
+import javax.jms.*;
 
 /**
  * Created by dSklyarenko on 07.02.14.
@@ -26,17 +21,14 @@ public class MessageSenderImpl implements MessageSender {
         this.jmsTemplate = jmsTemplate;
     }
 
-    public void sendMessage(String destinationName, final JSONMessage jsonMessage) {
+    public void sendMessage(String destinationName, final JSONObject jsonObject) {
         MessageCreator creator = new MessageCreator() {
             @Override
             public Message createMessage(Session session) throws JMSException {
-                ObjectMessage message = session.createObjectMessage();
-                message.setObject(jsonMessage);
+                TextMessage message = session.createTextMessage(jsonObject.toString());
                 return message;
             }
         };
         jmsTemplate.send(destinationName, creator);
     }
-
-
 }

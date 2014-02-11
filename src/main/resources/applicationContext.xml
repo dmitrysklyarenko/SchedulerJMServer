@@ -14,12 +14,27 @@
     </bean>
 
     <bean id="messageSender"
-          class="org.schedulerjms.infrastructure.sender.MessageSenderImpl">
+          class="org.schedulerjms.infrastructure.jms.sender.MessageSenderImpl">
+        <property name="jmsTemplate" ref="sampleJmsTemplate"/>
+    </bean>
+
+    <bean id="messageReceiver"
+          class="org.schedulerjms.infrastructure.jms.receiver.MessageReceiverImpl">
         <property name="jmsTemplate" ref="sampleJmsTemplate"/>
     </bean>
 
     <bean id="appService"
           class="org.schedulerjms.service.AppServiceImpl">
         <property name="messageSender" ref="messageSender"/>
+        <property name="messageReceiver" ref="messageReceiver"/>
+    </bean>
+
+    <bean id="schedulerFactory"
+          class="org.quartz.impl.StdSchedulerFactory">
+    </bean>
+
+    <bean id="scheduler"
+          class="org.schedulerjms.infrastructure.quartzscheduler.QuartzSchedulerImpl">
+        <property name="schedulerFactory" ref="schedulerFactory"/>
     </bean>
 </beans>
