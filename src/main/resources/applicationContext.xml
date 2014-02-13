@@ -33,8 +33,14 @@
           class="org.quartz.impl.StdSchedulerFactory">
     </bean>
 
-    <bean id="scheduler"
-          class="org.schedulerjms.infrastructure.quartzscheduler.QuartzSchedulerImpl">
+    <bean id="jobScheduler"
+          class="org.schedulerjms.infrastructure.quartzscheduler.jobscheduler.JobSchedulerImpl">
         <property name="schedulerFactory" ref="schedulerFactory"/>
     </bean>
+
+    <bean id="messageHandler"
+          class="org.schedulerjms.infrastructure.quartzscheduler.MessageHandlerImpl">
+    </bean>
+
+
 </beans>

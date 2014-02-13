@@ -1,10 +1,7 @@
-package org.schedulerjms.infrastructure.quartzscheduler;
+package org.schedulerjms.infrastructure.quartzscheduler.jobscheduler;
 
 import org.json.JSONObject;
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.SchedulerFactory;
+import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.quartz.JobBuilder.newJob;
@@ -12,12 +9,12 @@ import static org.quartz.JobBuilder.newJob;
 /**
  * Created by dSklyarenko on 10.02.14.
  */
-public class QuartzSchedulerImpl implements QuartzScheduler {
+public class JobSchedulerImpl implements JobScheduler {
 
     @Autowired
     private SchedulerFactory schedulerFactory;
 
-    public QuartzSchedulerImpl() { }
+    public JobSchedulerImpl() { }
 
     public void setSchedulerFactory(SchedulerFactory schedulerFactory) {
         this.schedulerFactory = schedulerFactory;
