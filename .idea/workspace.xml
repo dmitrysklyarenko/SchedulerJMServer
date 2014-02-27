@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d1cac8-ac62-4b9c-a0a1-d685d5f5fb66" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\jms\receiver\MessageReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\jms\receiver\MessageReceiverImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\json\JSONObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\quartzscheduler\MessageHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\quartzscheduler\MessageHandlerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\quartzscheduler\jobscheduler\JobScheduler.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\dSklyarenko\IdeaProjects\SchedulerJMServer\src\main\java\org\schedulerjms\infrastructure\quartzscheduler\jobscheduler\JobSchedulerImpl.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/schedulerjms/service/AppService.java" afterPath="$PROJECT_DIR$/src/main/java/org/schedulerjms/service/AppService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/schedulerjms/service/AppServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/schedulerjms/service/AppServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/schedulerjms/executor/Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/schedulerjms/executor/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/jms/sender/MessageSender.java" afterPath="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/jms/sender/MessageSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/jms/sender/MessageSenderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/jms/sender/MessageSenderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java" afterPath="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java" />
     </list>
     <ignored path="SchedulerJMServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,7 +69,7 @@
       <file leaf-file-name="SpringFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/springfactory/SpringFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+            <state line="8" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/executor/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="28" selection-start="683" selection-end="683" vertical-scroll-proportion="0.5374376" vertical-offset="0" max-vertical-offset="601">
+            <state line="19" column="28" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,13 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventJob.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="EventJob.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="952">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="5" column="39" selection-start="209" selection-end="209" vertical-scroll-proportion="0.09199134" vertical-offset="0" max-vertical-offset="924">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,7 +125,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/model/Rule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <folding />
+              <folding>
+                <element signature="e#317#318#0" expanded="false" />
+                <element signature="e#348#349#0" expanded="false" />
+                <element signature="e#396#397#0" expanded="false" />
+                <element signature="e#436#437#0" expanded="false" />
+                <element signature="e#462#463#0" expanded="false" />
+                <element signature="e#487#488#0" expanded="false" />
+                <element signature="e#520#521#0" expanded="false" />
+                <element signature="e#548#549#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -204,11 +198,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/service/AppService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/jms/sender/MessageSender.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/jms/sender/MessageSenderImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/QuartzHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/QuartzHandlerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/model/Rule.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/executor/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java" />
       </list>
     </option>
   </component>
@@ -856,7 +850,7 @@
       <workItem from="1392388397454" duration="1804000" />
       <workItem from="1392725735687" duration="670000" />
       <workItem from="1393251065858" duration="45000" />
-      <workItem from="1393251624741" duration="9491000" />
+      <workItem from="1393251624741" duration="11331000" />
     </task>
     <task id="LOCAL-00001" summary="add dependencies">
       <created>1391694493388</created>
@@ -874,10 +868,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60275000" />
+    <option name="totallyTimeSpent" value="62115000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -901,7 +895,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -978,11 +972,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="57" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="782">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#717#985#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#717#985#0" expanded="false" />
+            <element signature="e#974#975#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1038,11 +1030,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="47" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="816">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#717#985#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#717#985#0" expanded="false" />
+            <element signature="e#974#975#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1097,22 +1087,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/springfactory/SpringFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/service/AppServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.66233766" vertical-offset="0" max-vertical-offset="924">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1029#1030#0" expanded="false" />
+            <element signature="e#1079#1080#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1128,7 +1109,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.2391775" vertical-offset="0" max-vertical-offset="924">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1137,20 +1118,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#717#985#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="952">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#717#985#0" expanded="false" />
+            <element signature="e#974#975#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1178,16 +1148,41 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/model/Rule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
+          <folding>
+            <element signature="e#317#318#0" expanded="false" />
+            <element signature="e#348#349#0" expanded="false" />
+            <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#436#437#0" expanded="false" />
+            <element signature="e#462#463#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#520#521#0" expanded="false" />
+            <element signature="e#548#549#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/executor/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="683" selection-end="683" vertical-scroll-proportion="0.5374376" vertical-offset="0" max-vertical-offset="601">
+        <state line="19" column="28" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/springfactory/SpringFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/schedulerjms/infrastructure/quartzhandler/EventJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="209" selection-end="209" vertical-scroll-proportion="0.09199134" vertical-offset="0" max-vertical-offset="924">
+          <folding />
         </state>
       </provider>
     </entry>
