@@ -1,14 +1,18 @@
 package org.schedulerjms.service;
 
-import javax.jms.JMSException;
+import org.quartz.SchedulerException;
+import org.schedulerjms.model.Rule;
+
+import java.util.Date;
 
 /**
- * Created by dSklyarenko on 07.02.14.
+ * Created by dSklyarenko on 25.02.14.
  */
 public interface AppService {
 
-    public void sendMessage();
+    public void addPointRule(Rule rule, Date startDate, String destinationName) throws Exception;
 
-    public void receiveMessage() throws JMSException;
+    public void addPeriodicRule(Rule rule, Date startDate, int period, String destinationName) throws SchedulerException;
 
+    public void deleteRule(Rule rule) throws SchedulerException;
 }

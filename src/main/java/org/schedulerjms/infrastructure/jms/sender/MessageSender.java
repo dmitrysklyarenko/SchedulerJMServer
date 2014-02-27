@@ -1,9 +1,10 @@
 package org.schedulerjms.infrastructure.jms.sender;
 
 import org.json.JSONObject;
+import org.schedulerjms.model.Rule;
 
 /**
- * Created by dSklyarenko on 07.02.14.
+ * Created by dSklyarenko on 26.02.14.
  */
 public interface MessageSender {
 

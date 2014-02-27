@@ -13,28 +13,25 @@
         <property name="connectionFactory" ref="activeMQConnectionFactory"/>
     </bean>
 
-    <bean id="messageSender"
-          class="org.schedulerjms.infrastructure.jms.sender.MessageSenderImpl">
-        <property name="jmsTemplate" ref="sampleJmsTemplate"/>
-    </bean>
-
-    <bean id="messageReceiver"
-          class="org.schedulerjms.infrastructure.jms.receiver.MessageReceiverImpl">
-        <property name="jmsTemplate" ref="sampleJmsTemplate"/>
-    </bean>
-
     <bean id="appService"
           class="org.schedulerjms.service.AppServiceImpl">
-        <property name="messageSender" ref="messageSender"/>
-        <property name="messageReceiver" ref="messageReceiver"/>
+        <property name="quartzHandler" ref="quartzHandler"/>
+    </bean>
+
+    <bean id="quartzHandler"
+          class="org.schedulerjms.infrastructure.quartzhandler.QuartzHandlerImpl">
+        <property name="schedulerFactory" ref="schedulerFactory"/>
     </bean>
 
     <bean id="schedulerFactory"
           class="org.quartz.impl.StdSchedulerFactory">
     </bean>
 
-    <bean id="scheduler"
-          class="org.schedulerjms.infrastructure.quartzscheduler.SchedulerImpl">
-        <property name="schedulerFactory" ref="schedulerFactory"/>
+    <bean id="messageSender"
+          class="org.schedulerjms.infrastructure.jms.sender.MessageSenderImpl">
+        <property name="jmsTemplate" ref="sampleJmsTemplate"/>
     </bean>
+
+
+
 </beans>
