@@ -32,6 +32,4 @@
         <property name="jmsTemplate" ref="sampleJmsTemplate"/>
     </bean>
 
-
-
 </beans>

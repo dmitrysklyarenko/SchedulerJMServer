@@ -2,10 +2,14 @@ package org.schedulerjms.model;
 
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 /**
  * Created by dSklyarenko on 25.02.14.
  */
-public class Rule{
+public class Rule implements Serializable{
+
+    private static final long serialVersionUID = -7788619177798333712L;
 
     private String category;
     private int ID;
