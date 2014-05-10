@@ -1,7 +1,6 @@
 package org.schedulerjms.infrastructure.jms.sender;
 
 import org.json.JSONObject;
-import org.schedulerjms.model.Rule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;

@@ -2,10 +2,9 @@ package org.schedulerjms.infrastructure.quartzhandler;
 
 
 import org.quartz.*;
-import org.schedulerjms.model.Rule;
+import org.schedulerjms.model.PeriodicRule;
+import org.schedulerjms.model.PointRule;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Date;
 
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
@@ -20,45 +19,45 @@ public class QuartzHandlerImpl implements QuartzHandler {
     private SchedulerFactory schedulerFactory;
 
     @Override
-    public void createPointJob(Rule rule, Date startDate, String destinationName) throws Exception {
+    public void createPointJob(PointRule pointRule) throws Exception {
         Scheduler scheduler = schedulerFactory.getScheduler();
         scheduler.start();
         JobDetail jobDetail = newJob(EventJob.class)
-                .withIdentity(rule.getCategory() + rule.getID())
-                .usingJobData("category", rule.getCategory())
-                .usingJobData("ID", rule.getID())
-                .usingJobData("destinationName", destinationName)
+                .withIdentity(pointRule.getUniqueId())
+                .usingJobData("category", pointRule.getCategory())
+                .usingJobData("ID", pointRule.getID())
+                .usingJobData("destinationName", pointRule.getDestinationName())
                 .build();
         Trigger trigger = newTrigger()
-                .withIdentity(rule.getCategory() + rule.getID())
-                .startAt(startDate)
+                .withIdentity(pointRule.getUniqueId())
+                .startAt(pointRule.getStartDate())
                 .build();
         scheduler.scheduleJob(jobDetail, trigger);
     }
 
     @Override
-    public void createPeriodicJob(Rule rule, Date startDate, int period, String destinationName) throws SchedulerException {
+    public void createPeriodicJob(PeriodicRule periodicRule) throws SchedulerException {
         Scheduler scheduler = schedulerFactory.getScheduler();
         scheduler.start();
         JobDetail jobDetail = newJob(EventJob.class)
-                .withIdentity(rule.getCategory() + rule.getID())
-                .usingJobData("category", rule.getCategory())
-                .usingJobData("ID", rule.getID())
-                .usingJobData("destinationName", destinationName)
+                .withIdentity(periodicRule.getUniqueId())
+                .usingJobData("category", periodicRule.getCategory())
+                .usingJobData("ID", periodicRule.getID())
+                .usingJobData("destinationName", periodicRule.getDestinationName())
                 .build();
         Trigger trigger = newTrigger()
-                .withIdentity(rule.getCategory() + rule.getID())
-                .startAt(startDate)
-                .withSchedule(simpleSchedule().withIntervalInSeconds(period).repeatForever())
+                .withIdentity(periodicRule.getUniqueId())
+                .startAt(periodicRule.getStartDate())
+                .withSchedule(simpleSchedule().withIntervalInSeconds(periodicRule.getPeriod()).repeatForever())
                 .build();
         scheduler.scheduleJob(jobDetail, trigger);
     }
 
     @Override
-    public void deleteJob(Rule rule) throws SchedulerException {
+    public void deleteJob(String uniqueId) throws SchedulerException {
         Scheduler scheduler = schedulerFactory.getScheduler();
-        scheduler.unscheduleJob(TriggerKey.triggerKey(rule.getCategory() + rule.getID()));
-        scheduler.deleteJob(JobKey.jobKey(rule.getCategory() + rule.getID()));
+        scheduler.unscheduleJob(TriggerKey.triggerKey(uniqueId));
+        scheduler.deleteJob(JobKey.jobKey(uniqueId));
     }
 
     public void setSchedulerFactory(SchedulerFactory schedulerFactory) {

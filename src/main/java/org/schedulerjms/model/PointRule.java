@@ -13,10 +13,19 @@ public class PointRule implements Serializable{
 
     private static final long serialVersionUID = -7788619177798333712L;
 
+    private String uniqueId;
     private int ID;
     private String category;
     private Date startDate;
     private String destinationName;
+
+    public void setUniqueId() {
+        this.uniqueId = this.category + this.ID;
+    }
+
+    public String getUniqueId() {
+        return this.uniqueId;
+    }
 
     public int getID() {
         return ID;
