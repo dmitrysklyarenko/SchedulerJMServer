@@ -69,4 +69,18 @@ public class PeriodicRule implements Serializable{
         this.destinationName = destinationName;
     }
 
+    public boolean equals(PeriodicRule periodicRule) {
+        if(
+                !this.category.equals(periodicRule.getCategory()) ||
+                        this.ID != periodicRule.getID() ||
+                        this.period != periodicRule.period ||
+                        !this.startDate.equals(periodicRule.getStartDate()) ||
+                        !this.destinationName.equals(periodicRule.getDestinationName()) ||
+                        !this.uniqueId.equals(periodicRule.getUniqueId())
+                ) {
+            return false;
+        }
+        return true;
+    }
+
 }

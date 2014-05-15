@@ -38,5 +38,8 @@ public class SchedulerController {
         return uniqueId;
     }
 
+    public void setAppService(AppService appService) {
+        this.appService = appService;
+    }
 
 }

@@ -60,4 +60,16 @@ public class PointRule implements Serializable{
         this.destinationName = destinationName;
     }
 
+    public boolean equals(PointRule pointRule) {
+        if(
+                !this.category.equals(pointRule.getCategory()) ||
+                this.ID != pointRule.getID() ||
+                !this.startDate.equals(pointRule.getStartDate()) ||
+                !this.destinationName.equals(pointRule.getDestinationName()) ||
+                !this.uniqueId.equals(pointRule.getUniqueId())
+        ) {
+            return false;
+        }
+        return true;
+    }
 }

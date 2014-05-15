@@ -1,0 +1,169 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: PeriodicRule</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">org.schedulerjms.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: PeriodicRule (org.schedulerjms.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PeriodicRule</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/ 14)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    95,5%
+  </span>
+  <span class="absValue">
+    (21/ 22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package org.schedulerjms.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+<i>4</i>&nbsp;import com.fasterxml.jackson.databind.ser.std.DateSerializer;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import java.io.Serializable;
+<i>7</i>&nbsp;import java.util.Date;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;/**
+<i>10</i>&nbsp; * Created by dSklyarenko on 08.05.14.
+<i>11</i>&nbsp; */
+<b class="fc"><i>12</i>&nbsp;public class PeriodicRule implements Serializable{</b>
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;    private static final long serialVersionUID = -7788619177798333712L;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    private String uniqueId;
+<i>17</i>&nbsp;    private int ID;
+<i>18</i>&nbsp;    private String category;
+<i>19</i>&nbsp;    private Date startDate;
+<i>20</i>&nbsp;    private int period;
+<i>21</i>&nbsp;    private String destinationName;
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;    public void setUniqueId() {
+<b class="fc"><i>24</i>&nbsp;        this.uniqueId = this.category + this.ID;</b>
+<b class="fc"><i>25</i>&nbsp;    }</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    public String getUniqueId() {
+<b class="fc"><i>28</i>&nbsp;        return this.uniqueId;</b>
+<i>29</i>&nbsp;    }
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    public int getID() {
+<b class="fc"><i>32</i>&nbsp;        return ID;</b>
+<i>33</i>&nbsp;    }
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    public void setID(int ID) {
+<b class="fc"><i>36</i>&nbsp;        this.ID = ID;</b>
+<b class="fc"><i>37</i>&nbsp;    }</b>
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;    public String getCategory() {
+<b class="fc"><i>40</i>&nbsp;        return category;</b>
+<i>41</i>&nbsp;    }
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;    public void setCategory(String category) {
+<b class="fc"><i>44</i>&nbsp;        this.category = category;</b>
+<b class="fc"><i>45</i>&nbsp;    }</b>
+<i>46</i>&nbsp;
+<i>47</i>&nbsp;    @JsonSerialize(using=DateSerializer.class)
+<i>48</i>&nbsp;    public Date getStartDate() {
+<b class="fc"><i>49</i>&nbsp;        return startDate;</b>
+<i>50</i>&nbsp;    }
+<i>51</i>&nbsp;
+<i>52</i>&nbsp;    public void setStartDate(long startDate) {
+<b class="fc"><i>53</i>&nbsp;        this.startDate = new Date(startDate);</b>
+<b class="fc"><i>54</i>&nbsp;    }</b>
+<i>55</i>&nbsp;
+<i>56</i>&nbsp;    public int getPeriod() {
+<b class="fc"><i>57</i>&nbsp;        return period;</b>
+<i>58</i>&nbsp;    }
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    public void setPeriod(int period) {
+<b class="fc"><i>61</i>&nbsp;        this.period = period;</b>
+<b class="fc"><i>62</i>&nbsp;    }</b>
+<i>63</i>&nbsp;
+<i>64</i>&nbsp;    public String getDestinationName() {
+<b class="fc"><i>65</i>&nbsp;        return destinationName;</b>
+<i>66</i>&nbsp;    }
+<i>67</i>&nbsp;
+<i>68</i>&nbsp;    public void setDestinationName(String destinationName) {
+<b class="fc"><i>69</i>&nbsp;        this.destinationName = destinationName;</b>
+<b class="fc"><i>70</i>&nbsp;    }</b>
+<i>71</i>&nbsp;
+<i>72</i>&nbsp;    public boolean equals(PeriodicRule periodicRule) {
+<b class="fc"><i>73</i>&nbsp;        if(</b>
+<i>74</i>&nbsp;                !this.category.equals(periodicRule.getCategory()) ||
+<i>75</i>&nbsp;                        this.ID != periodicRule.getID() ||
+<i>76</i>&nbsp;                        this.period != periodicRule.period ||
+<i>77</i>&nbsp;                        !this.startDate.equals(periodicRule.getStartDate()) ||
+<i>78</i>&nbsp;                        !this.destinationName.equals(periodicRule.getDestinationName()) ||
+<i>79</i>&nbsp;                        !this.uniqueId.equals(periodicRule.getUniqueId())
+<i>80</i>&nbsp;                ) {
+<b class="nc"><i>81</i>&nbsp;            return false;</b>
+<i>82</i>&nbsp;        }
+<b class="fc"><i>83</i>&nbsp;        return true;</b>
+<i>84</i>&nbsp;    }
+<i>85</i>&nbsp;
+<i>86</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2014-05-15 12:45</div>
+</div>
+</body>
+</html>
